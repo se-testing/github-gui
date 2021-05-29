@@ -1,0 +1,6 @@
+{
+  "baseUrl": "https://github.com/",
+  "integrationFolder": "cypress/integration",
+  "viewportWidth": 1280,
+  "viewportHeight": 600
+}
