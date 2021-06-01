@@ -10,7 +10,9 @@
     "cypress": "^7.4.0",
     "yarn": "^1.22.10"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@4tw/cypress-drag-drop": "^1.6.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "run": "cypress run",
