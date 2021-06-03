@@ -2,7 +2,7 @@
 
 import {getRandString} from "../support/tools";
 
-context('Add Files', () => {
+context('Add Files As PR', () => {
   before(() => {
     cy.login();
   });
