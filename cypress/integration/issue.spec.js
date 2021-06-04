@@ -11,8 +11,6 @@ function randomString(len) {
 describe("Test issue", () => {
     before("login", () => {
         cy.login()
-    })
-    beforeEach("visit repository", () => {
         cy.visit("https://github.com/se-testing/repo-for-testing/issues")
     })
     it("test create issue", () => {
@@ -24,9 +22,12 @@ describe("Test issue", () => {
         cy.get("#js-repo-pjax-container").type("{enter}")
         cy.get(".btn .btn-primary").click()
     })
+    // it("test comment issue", () => {
+    //     //
+    // })
 })
 
-describe("Test keyboard shortcut - issue", () => {
+describe("Test keyboard shortcut of issue", () => {
     before("login", () => {
         cy.login()
     })
