@@ -35,9 +35,12 @@ context('Keyboard Shortcut', () => {
       .should('contain', 'Code')
 
     cy.get('body').type('t').wait(3000)
-    cy.get('#tree-finder-field').type('.gitignore{enter}')
+    cy.get('#tree-finder-field').type('.gitignore')
+    cy.get('#tree-finder-field').type('{enter}')
+		cy.get('#tree-finder-field').type('{enter}')
     cy.url().should('include', '/.gitignore')
 
+		cy.wait(3000)
     cy.get('body').type('l')
     cy.get('input.linejump-input').type('2{enter}')
     cy.get('td#LC2').should('have.class', 'highlighted')

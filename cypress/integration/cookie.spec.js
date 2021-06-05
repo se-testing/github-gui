@@ -2,13 +2,13 @@ context('Cookie', () => {
   it('cookie', () => {
     cy.login()
 
-    let username = 'HR-SU'
+    let username = 'test-account-for-se123'
     let session_cookie;
     cy.getCookie('user_session')
       .should('exist')
-      .then((cookie) => {
-        session_cookie = cookie.value
-      })
+      .then((c) => {
+				session_cookie = c.value
+		})
     cy.getCookie('logged_in')
       .should('have.property', 'value', 'yes')
     cy.getCookie('dotcom_user')
@@ -20,7 +20,10 @@ context('Cookie', () => {
     cy.reload()
     cy.contains('Sign up').should('exist')
 
-    cy.setCookie('user_session', session_cookie)
+    cy.get('body')
+			.then(() => {
+				cy.setCookie('user_session', String(session_cookie))
+		})
     cy.reload()
 
     cy.get('.d-none.mr-0 > details').click()
