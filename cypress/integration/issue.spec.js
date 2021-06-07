@@ -10,6 +10,9 @@ function randomString(len) {
 
 describe("Test issue", () => {
     before("login", () => {
+        Cypress.on('uncaught:exception', (err, runnable) => {
+            return false
+        })
         cy.login()
         cy.visit("https://github.com/se-testing/repo-for-testing/issues")
     })
@@ -21,7 +24,7 @@ describe("Test issue", () => {
         cy.get("#label-filter-field").type("question")
         cy.wait(2000)
         cy.get("#label-filter-field").type("{enter}")
-        cy.click(100, 100)
+        cy.get("body").click(100, 100)
         cy.get(".btn-primary").contains("Submit new issue").click()
     })
 })
