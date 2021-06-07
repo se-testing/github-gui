@@ -19,7 +19,7 @@ describe("Test issue", () => {
         cy.get("#issue_body").type(randomString(100))
         cy.get("#labels-select-menu").click()
         cy.get("#label-filter-field").type("question")
-        cy.wait("2000")
+        cy.wait(2000)
         cy.get("#label-filter-field").type("{enter}")
         cy.click(100, 100)
         cy.get(".btn-primary").contains("Submit new issue").click()
