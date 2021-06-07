@@ -1,8 +1,6 @@
 describe("Test keyboard shortcut of issue", () => {
-    before("login", () => {
-        cy.login()
-    })
     beforeEach("visit repository", () => {
+        cy.login()
         cy.visit("https://github.com/se-testing/repo-for-testing/issues")
     })
     it("test create", () => {
@@ -20,7 +18,6 @@ describe("Test keyboard shortcut of issue", () => {
     it("test label filter", () => {
         cy.get("body").type("l")
         cy.get("#label-filter-field").should("be.focused")
-        cy.type("{alt+enter}")
     })
     it("test milestones filter", () => {
         cy.get("body").type("m")

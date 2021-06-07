@@ -1,5 +1,5 @@
 describe("Test star", () => {
-    before(() => {
+    beforeEach(() => {
         cy.login()
     })
     it("should test star", () => {
