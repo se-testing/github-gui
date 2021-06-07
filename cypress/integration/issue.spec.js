@@ -22,9 +22,6 @@ describe("Test issue", () => {
         cy.get("#js-repo-pjax-container").type("{enter}")
         cy.get(".btn .btn-primary").click()
     })
-    // it("test comment issue", () => {
-    //     //
-    // })
 })
 
 describe("Test keyboard shortcut of issue", () => {
