@@ -10,6 +10,7 @@
     "yarn": "^1.22.10"
   },
   "devDependencies": {
+    "@4tw/cypress-drag-drop": "^1.6.0"
     "cypress": "^7.4.0"
     "cypress-file-upload": "^5.0.7"
   },
