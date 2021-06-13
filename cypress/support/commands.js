@@ -1,4 +1,6 @@
-Cypress.Commands.add('login', ()=>{
+import 'cypress-file-upload';
+
+Cypress.Commands.add('login', () => {
   cy.visit('https://github.com/');
   cy.get('.text-lg-left > .mr-3')
     .click()
@@ -8,4 +10,11 @@ Cypress.Commands.add('login', ()=>{
     .type('testaccountforse123')
     .get('.btn')
     .click();
-})
+});
+
+Cypress.Commands.add('preserveAllCookiesOnce', () => {
+  cy.getCookies().then(cookies => {
+    const namesOfCookies = cookies.map(c => c.name)
+    Cypress.Cookies.preserveOnce(...namesOfCookies)
+  })
+});
