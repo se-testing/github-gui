@@ -7,11 +7,12 @@
     "test": "test"
   },
   "dependencies": {
-    "cypress": "^7.4.0",
     "yarn": "^1.22.10"
   },
   "devDependencies": {
     "@4tw/cypress-drag-drop": "^1.6.0"
+    "cypress": "^7.4.0"
+    "cypress-file-upload": "^5.0.7"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -27,5 +28,6 @@
   "bugs": {
     "url": "https://github.com/test-account-for-se123/github-gui/issues"
   },
-  "homepage": "https://github.com/test-account-for-se123/github-gui#readme"
+  "homepage": "https://github.com/test-account-for-se123/github-gui#readme",
+  "keywords": []
 }
